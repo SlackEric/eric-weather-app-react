@@ -1,7 +1,11 @@
 import React from 'react';
 
-class Footer extends React.Component {
-
+function Footer() {
+    return (
+        <footer className="weather-channel__footer">
+            <p>Powered by React</p>
+        </footer>
+    );
 }
 
 export default Footer;

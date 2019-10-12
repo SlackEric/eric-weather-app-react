@@ -108,6 +108,12 @@ nav {
   font-size: 1.2rem;
   font-weight: 700;
 }
+
+.weather-condition__overview {
+  text-align: center;
+  font-size: 14px;
+}
+
 .weather-condition__desc {
   display: flex;
   justify-content: space-around;

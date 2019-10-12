@@ -1,7 +1,14 @@
 import React from 'react';
+import WeatherCondition from './WeatherCondition';
+import WeatherForecast from './WeatherForecast';
 
-class Main extends React.Component {
-
+function Main () {
+    return (
+        <main>
+            <WeatherCondition />
+            <WeatherForecast />
+        </main>
+    );
 }
 
-export default Main
+export default Main;
