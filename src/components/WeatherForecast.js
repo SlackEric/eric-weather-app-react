@@ -1,8 +1,12 @@
 import React from 'react';
 import {format} from 'date-fns';
+import { connect } from 'react-redux';
+import {updateLimitAction} from '../actions';
 import ForecastRow from './ForecastRow';
 
 class WeatherForecast extends React.Component {
+
+
     render() {
         const {limit, unit} = this.props;
         const forecasts = this.props.forecasts.slice(0, limit);
@@ -42,7 +46,15 @@ class WeatherForecast extends React.Component {
                 })}
             </section>
         );
-    }
+    };
 }
 
-export default WeatherForecast;
+const mapStateToProps = state => ({
+    limit: state.weatherForecast.limit
+});
+
+const mapDispatchToProps = dispatch => ({
+    updateLimit: limit => dispatch(updateLimitAction(limit)),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(WeatherForecast);

@@ -42,9 +42,11 @@ handleSearch = () => {
   .then(this.updateWeather);
 }
 
+/*
   handleChangeLimit = limit => {
       this.setState({limit});
   }
+  */
 
   handleInputChange = event => {
       this.setState({ input: event.target.value });
