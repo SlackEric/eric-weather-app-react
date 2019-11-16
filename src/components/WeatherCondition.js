@@ -2,6 +2,7 @@ import React from 'react';
 import umbrella from '../icons/icon-umbrella.png';
 import wind from '../icons/icon-wind.png';
 import compass from '../icons/icon-compass.png';
+import { connect } from 'react-redux';
 
 function WeatherCondition(props) {
     const {
@@ -37,4 +38,9 @@ function WeatherCondition(props) {
     );
 }
 
-export default WeatherCondition;
+const mapStateToProps = state => ({
+     cityName: state.weather.cityName,
+     current: state.weather.current,
+});
+
+export default connect(mapStateToProps, null)(WeatherCondition);

@@ -8,14 +8,9 @@ function Main (props) {
         <main>
             <WeatherCondition 
                 unit={props.unit}
-                cityName={props.cityName}
-                current={props.current}
             />
             <WeatherForecast 
                 unit={props.unit}
-                forecasts={props.forecasts}
-                handleChangeLimit={props.handleChangeLimit}
-                limit={props.limit}
             />
         </main>
     );
