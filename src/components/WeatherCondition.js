@@ -19,7 +19,7 @@ function WeatherCondition(props) {
     return (
         <section className="weather-condition">
             <div className="weather-condition__location">{cityName}</div>
-            <div className="weather-condition__temp">{unit === 'c' ? maxCelsius : maxFahrenheit}{unit}</div>
+            <div className="weather-condition__temp">{unit === 'Fahrenheit' ? maxCelsius : maxFahrenheit}{unit}</div>
             <div className="weather-condition__desc">
                 <div>
                     <img src={umbrella} alt="umbrella" />
